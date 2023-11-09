@@ -1,0 +1,12 @@
+{
+  "name": "netflix-gpt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Sudip",
+  "license": "ISC"
+}
