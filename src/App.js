@@ -4,7 +4,7 @@ import Body from "./components/Body";
 
 const AppLayout = () => {
     return (
-        <body />
+        <Body />
     )
 }
 const root = ReactDOM.createRoot(document.getElementById("root"));
