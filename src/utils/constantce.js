@@ -10,3 +10,5 @@ export const USER_AVATAR =
       Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlOTUyNjk0YWZiOWFjZjVkYTI4ZDc5NDExMjRkMjA3MiIsInN1YiI6IjY1Njg2ZDFlMTI3Nzc4MDlkYWIxZjc0NCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.8tWTu8WwvgnU2pLeZqC36JAjUJ3BF7IELzu7RkuAVuc"
     },
   };
+
+  
