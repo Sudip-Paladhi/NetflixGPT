@@ -4,6 +4,9 @@ import Body from "./components/Body";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 
+
+// Rest of your application code...
+
 const AppLayout = () => {
   return (
     <Provider store={appStore}>
