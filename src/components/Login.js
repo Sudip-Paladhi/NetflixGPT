@@ -4,6 +4,7 @@ import { checkValidData } from "../utils/validate";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
@@ -12,10 +13,11 @@ import { BG_URL, USER_AVATAR } from "../utils/constantce";
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
+  const dispatch = useDispatch();
   const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
-  const dispatch = useDispatch();
+
 
   const handleButtonClick = () => {
     const message = checkValidData(email.current.value, password.current.value);
@@ -82,14 +84,14 @@ const Login = () => {
     <>
       <Header />
       <div className="absolute">
-        <img
+        <img className="h-screen object-cover "
           src={BG_URL}
           alt="Background Image"
         />
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="absolute w-4/12 mx-auto right-0 left-0 p-12 my-24 text-white bg-black bg-opacity-80"
+        className="absolute w-full md:w-4/12 mx-auto right-0 left-0 p-12 my-24 text-white bg-black bg-opacity-80"
       >
         <h1 className="text-3xl py-4 font-bold">
           {isSignInForm ? "Sign In" : "Sign Up"}
