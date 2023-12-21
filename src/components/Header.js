@@ -64,13 +64,13 @@ const Header = () => {
 
   return (
     <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between">
-      <img className="w-44 mx-auto md:mx-0" src={LOGO} alt="Logo" />
+      <img className="w-44 md:w-52 mx-auto md:mx-0" src={LOGO} alt="Logo" />
 
       {user && (
         <div className="flex justify-between p-2">
           {showGptSearch && (
             <select
-              className="p-2 m-2 bg-gray-900 text-white rounded-lg"
+              className="px-2 py-2 md:py-1 md:px-4 md:mx-4 md:my-3 bg-gray-900 text-white rounded-lg"
               onClick={handleLanguageChange}
             >
               {SUPORTED_LANGUAGE.map((lang) => (
@@ -81,14 +81,14 @@ const Header = () => {
             </select>
           )}
           <button
-            className="py-2 px-4 mx-4 my-2 text-white rounded-lg bg-purple-700"
+            className="px-2 py-2 md:py-1 md:px-4 md:mx-4 md:my-3 text-white rounded-lg bg-purple-700"
             onClick={handleGptSearchClick}
           >
             {showGptSearch ? "Home Page" : "GPT Search"}
           </button>
-          <img className="hidden md:block w-12 h-12" src={"https://occ-0-6247-2164.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABdpkabKqQAxyWzo6QW_ZnPz1IZLqlmNfK-t4L1VIeV1DY00JhLo_LMVFp936keDxj-V5UELAVJrU--iUUY2MaDxQSSO-0qw.png?r=e6e"} alt="UserIcon" />
-          <button className="font-bould text-white" onClick={handleSignOut}>
-            (Sign out)
+          <img className="hidden  w-12 h-12" src={"https://occ-0-6247-2164.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABdpkabKqQAxyWzo6QW_ZnPz1IZLqlmNfK-t4L1VIeV1DY00JhLo_LMVFp936keDxj-V5UELAVJrU--iUUY2MaDxQSSO-0qw.png?r=e6e"} alt="UserIcon" />
+          <button className="px-2 py-2 md:py-1 md:px-4 md:mx-4 md:my-3 font-bould text-white bg-red-800 rounded-lg" onClick={handleSignOut}>
+            Sign out
           </button>
         </div>
       )}
